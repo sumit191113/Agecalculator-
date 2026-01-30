@@ -96,6 +96,7 @@ const AgeCalculator: React.FC = () => {
         <select 
           value={day} 
           onChange={(e) => setDay(e.target.value)}
+          aria-label={`${label} - Day`}
           className="bg-white border border-slate-300 rounded-xl px-2 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all cursor-pointer text-slate-800 font-medium text-sm md:text-base"
         >
           {days.map(d => <option key={d} value={d}>{d.toString().padStart(2, '0')}</option>)}
@@ -103,6 +104,7 @@ const AgeCalculator: React.FC = () => {
         <select 
           value={month} 
           onChange={(e) => setMonth(e.target.value)}
+          aria-label={`${label} - Month`}
           className="bg-white border border-slate-300 rounded-xl px-2 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all cursor-pointer text-slate-800 font-medium text-sm md:text-base"
         >
           {monthsList.map((m, i) => <option key={i} value={i}>{m.substring(0, 3)}</option>)}
@@ -110,6 +112,7 @@ const AgeCalculator: React.FC = () => {
         <select 
           value={year} 
           onChange={(e) => setYear(e.target.value)}
+          aria-label={`${label} - Year`}
           className="bg-white border border-slate-300 rounded-xl px-2 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all cursor-pointer text-slate-800 font-medium text-sm md:text-base"
         >
           {years.map(y => <option key={y} value={y}>{y}</option>)}
@@ -126,7 +129,7 @@ const AgeCalculator: React.FC = () => {
             <h3 className="text-3xl font-bold mb-2">Age Explorer</h3>
             <p className="text-indigo-100 opacity-80">Define your chronological footprint</p>
           </div>
-          <div className="absolute top-0 right-0 p-4 opacity-10">
+          <div className="absolute top-0 right-0 p-4 opacity-10" aria-hidden="true">
             <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
           </div>
         </div>
@@ -147,7 +150,7 @@ const AgeCalculator: React.FC = () => {
           />
 
           {error && (
-            <div className="bg-red-50 text-red-600 p-4 rounded-xl text-sm font-medium border border-red-100 flex items-center gap-2">
+            <div role="alert" className="bg-red-50 text-red-600 p-4 rounded-xl text-sm font-medium border border-red-100 flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               {error}
             </div>
@@ -159,7 +162,7 @@ const AgeCalculator: React.FC = () => {
             className={`w-full relative overflow-hidden group py-5 rounded-2xl text-white font-extrabold text-xl transition-all shadow-xl ${isCalculating ? 'bg-indigo-400 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700 active:scale-95 shadow-indigo-200'}`}
           >
             <span className={isCalculating ? 'opacity-0' : 'opacity-100 transition-opacity'}>
-              Generate Report
+              Generate Exact Report
             </span>
             {isCalculating && (
               <div className="absolute inset-0 flex items-center justify-center">
@@ -170,7 +173,7 @@ const AgeCalculator: React.FC = () => {
         </form>
 
         {result && (
-          <div id="results-view" className="bg-slate-50 border-t border-slate-100 p-6 md:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div id="results-view" className="bg-slate-50 border-t border-slate-100 p-6 md:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500" aria-live="polite">
             {/* Primary Display */}
             <div className="text-center mb-10">
               <div className="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold uppercase tracking-widest mb-4">You are exactly</div>
@@ -219,27 +222,27 @@ const AgeCalculator: React.FC = () => {
                 </div>
                 <div className="flex-grow">
                   <div className="flex items-center gap-2">
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Total Seconds</div>
-                    {isTargetToday && <span className="flex h-2 w-2 rounded-full bg-indigo-400 animate-ping"></span>}
+                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Total Seconds Alive</div>
+                    {isTargetToday && <span className="flex h-2 w-2 rounded-full bg-indigo-400 animate-ping" aria-hidden="true"></span>}
                   </div>
                   <div className="text-3xl font-black text-slate-900 tabular-nums">
                     {(liveSeconds || result.totalSeconds).toLocaleString()}
                   </div>
                 </div>
-                {isTargetToday && <div className="text-[10px] font-bold text-indigo-400 uppercase tracking-tighter absolute right-4 top-4">Live Ticking</div>}
+                {isTargetToday && <div className="text-[10px] font-bold text-indigo-400 uppercase tracking-tighter absolute right-4 top-4">Real-time Data</div>}
               </div>
 
               <div className="bg-indigo-600 p-6 rounded-3xl md:col-span-2 text-white relative overflow-hidden group">
                 <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
-                    <div className="text-indigo-200 text-sm font-bold uppercase tracking-widest mb-1">Next Birthday In</div>
-                    <div className="text-3xl font-black">{result.nextBirthdayDays} Days</div>
+                    <div className="text-indigo-200 text-sm font-bold uppercase tracking-widest mb-1">Next Birthday Countdown</div>
+                    <div className="text-3xl font-black">{result.nextBirthdayDays} Days Remaining</div>
                   </div>
                   <div className="bg-white/20 backdrop-blur-md px-6 py-2 rounded-xl text-sm font-bold group-hover:bg-white/30 transition-colors cursor-pointer">
-                    Save Celebration
+                    Plan Celebration
                   </div>
                 </div>
-                <div className="absolute top-0 right-0 p-4 opacity-10">
+                <div className="absolute top-0 right-0 p-4 opacity-10" aria-hidden="true">
                   <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                 </div>
               </div>
@@ -247,14 +250,14 @@ const AgeCalculator: React.FC = () => {
 
             <button 
               onClick={() => {
-                const text = `I am ${result.years} years old! Calculated with AgeMeter.`;
+                const text = `I am ${result.years} years old! Calculated exactly with AgeMeter: https://agemeter.vercel.app/`;
                 navigator.clipboard.writeText(text);
-                alert('Result copied to clipboard!');
+                alert('Success: Age report copied to clipboard!');
               }}
               className="mt-8 w-full py-3 text-indigo-600 font-bold text-sm flex items-center justify-center gap-2 hover:bg-white rounded-xl transition-all border border-transparent hover:border-indigo-100"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
-              Share Results
+              Share Accuracy
             </button>
           </div>
         )}

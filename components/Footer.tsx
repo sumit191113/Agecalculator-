@@ -54,7 +54,6 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex gap-6">
             <span className="text-sm px-3 py-1 bg-slate-800 rounded-full border border-slate-700">v1.2.4</span>
-            <span className="text-sm px-3 py-1 bg-indigo-900/30 text-indigo-400 rounded-full border border-indigo-500/30">AdSense Ready</span>
           </div>
         </div>
       </div>
