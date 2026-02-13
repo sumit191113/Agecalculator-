@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-indigo-700 transition-colors">
             A
           </div>
-          <span className="text-2xl font-bold tracking-tight text-slate-800">AgeMeter</span>
+          <span className="text-2xl font-bold tracking-tight text-slate-800">Age Track</span>
         </a>
         <nav className="hidden md:flex items-center gap-8">
           <a href="#/" className="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Home</a>

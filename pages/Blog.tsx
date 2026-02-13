@@ -7,7 +7,7 @@ const Blog: React.FC = () => {
     <main className="pt-32 pb-24 bg-slate-50 min-h-screen">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <h1 className="text-5xl font-bold font-serif text-slate-900 mb-6">AgeMeter Insights</h1>
+          <h1 className="text-5xl font-bold font-serif text-slate-900 mb-6">Age Track Insights</h1>
           <p className="text-xl text-slate-600 leading-relaxed">
             Exploring the intersection of time, law, health, and mathematics. Your comprehensive guide to chronological science.
           </p>

@@ -1,8 +1,8 @@
 
 import { BlogPost, FAQItem } from './types';
 
-export const SITE_NAME = "AgeMeter";
-export const CONTACT_EMAIL = "support@agemeter.com";
+export const SITE_NAME = "Age Track";
+export const CONTACT_EMAIL = "support@agetrack.com";
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -22,7 +22,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h3>Step 2: Accounting for Leap Years</h3>
       <p>Did you know that every year divisible by 4 is a leap year, except for century years not divisible by 400? This rule, established by the Gregorian Calendar reform in 1582, ensures our calendar remains synchronized with the Earth's orbit around the sun. When calculating age manually over several decades, you must manually count these extra 24-hour periods to get an accurate total day count.</p>
       <h3>Why Manual Knowledge Matters</h3>
-      <p>While tools like AgeMeter make it instantaneous, understanding the logic helps in critical situations like manual record keeping in remote areas or verifying historical documents where digital tools aren't available.</p>
+      <p>While tools like Age Track make it instantaneous, understanding the logic helps in critical situations like manual record keeping in remote areas or verifying historical documents where digital tools aren't available.</p>
     `
   },
   {
@@ -68,7 +68,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "Using date subtraction for project management, pregnancy tracking, and anniversaries.",
     content: `
       <h2>The Versatility of Date Subtraction</h2>
-      <p>While 'Age' usually refers to living beings, the concept of a 'date difference' applies to everything from project deadlines to the duration of historical empires. This tutorial teaches you how to leverage AgeMeter's core engine for broader use cases.</p>
+      <p>While 'Age' usually refers to living beings, the concept of a 'date difference' applies to everything from project deadlines to the duration of historical empires. This tutorial teaches you how to leverage Age Track's core engine for broader use cases.</p>
       <h3>Project Management</h3>
       <p>Calculate the exact number of working days between a project start date and a milestone. By subtracting weekend offsets, you can get a realistic view of productivity windows.</p>
       <h3>Personal Milestones</h3>
@@ -98,8 +98,8 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const FAQS: FAQItem[] = [
   {
-    question: "How accurate is the AgeMeter calculator?",
-    answer: "AgeMeter uses high-precision astronomical and chronological algorithms that account for all Gregorian leap year rules and varying month lengths, ensuring 100% accuracy for any date after 1582."
+    question: "How accurate is the Age Track calculator?",
+    answer: "Age Track uses high-precision astronomical and chronological algorithms that account for all Gregorian leap year rules and varying month lengths, ensuring 100% accuracy for any date after 1582."
   },
   {
     question: "Can I calculate age for historical figures?",
@@ -111,6 +111,6 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "Why do some calculators show different total days?",
-    answer: "Some simple calculators assume every year is 365 days. AgeMeter accounts for the specific leap years that occurred between your birth and today, providing a more precise total."
+    answer: "Some simple calculators assume every year is 365 days. Age Track accounts for the specific leap years that occurred between your birth and today, providing a more precise total."
   }
 ];

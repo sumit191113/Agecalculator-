@@ -250,7 +250,7 @@ const AgeCalculator: React.FC = () => {
 
             <button 
               onClick={() => {
-                const text = `I am ${result.years} years old! Calculated exactly with AgeMeter: https://agemeter.vercel.app/`;
+                const text = `I am ${result.years} years old! Calculated exactly with Age Track: https://agemeter.vercel.app/`;
                 navigator.clipboard.writeText(text);
                 alert('Success: Age report copied to clipboard!');
               }}

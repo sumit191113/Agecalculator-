@@ -34,7 +34,7 @@ const ToolPage: React.FC = () => {
               </div>
             </div>
 
-            <p>At <strong>AgeMeter</strong>, we've optimized the interface to be "Thumb-Friendly." Whether you are calculating the age of a newborn or checking eligibility for a historical record, our three-pillar selection process avoids the accidental taps and glitches common with native browser inputs.</p>
+            <p>At <strong>Age Track</strong>, we've optimized the interface to be "Thumb-Friendly." Whether you are calculating the age of a newborn or checking eligibility for a historical record, our three-pillar selection process avoids the accidental taps and glitches common with native browser inputs.</p>
             
             <h3 className="mt-12 font-serif text-slate-900">Why Manual Methods Fail</h3>
             <p>Manual age calculation is fraught with human error. The most common mistake involves the <strong>Month Carry-Over</strong>. When a birth day is greater than the target day, one must "borrow" days from the preceding month. However, since months vary from 28 to 31 days, the borrowing logic is dynamic. Our engine handles these algorithmic complexities in milliseconds.</p>
@@ -50,7 +50,7 @@ const ToolPage: React.FC = () => {
             <h3 className="mt-12 font-serif text-slate-900">Historical & Scientific Utility</h3>
             <p>Beyond personal curiosity, this tool serves professional needs in genealogy and scientific data normalization. Researchers often need to calculate "Age at Event" for thousands of data points. By providing a clean, reliable, and mobile-ready interface, we allow professionals to perform these checks in the field without access to specialized desktop software.</p>
             
-            <p>We invite you to explore the other sections of our site to learn about the <strong>Mathematics of Time</strong> or the <strong>Legal Importance of Age</strong> in government documentation. AgeMeter is not just a tool; it is a repository of chronological knowledge.</p>
+            <p>We invite you to explore the other sections of our site to learn about the <strong>Mathematics of Time</strong> or the <strong>Legal Importance of Age</strong> in government documentation. Age Track is not just a tool; it is a repository of chronological knowledge.</p>
           </section>
         </div>
       </div>

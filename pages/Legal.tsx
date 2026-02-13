@@ -44,9 +44,9 @@ const Legal: React.FC<Props> = ({ type }) => {
       `
     },
     about: {
-      title: "About AgeMeter",
+      title: "About Age Track",
       body: `
-        <p>AgeMeter was founded with a singular vision: to provide the most accurate and insightful chronological engine available on the web. We believe that understanding time is fundamental to understanding our lives.</p>
+        <p>Age Track was founded with a singular vision: to provide the most accurate and insightful chronological engine available on the web. We believe that understanding time is fundamental to understanding our lives.</p>
         <p>Our team consists of developers, data scientists, and history enthusiasts who have spent years perfecting the algorithms that power our calculator. We use advanced astronomical libraries to ensure that every leap year, every time zone, and every calendar reform is accounted for.</p>
         <h3>Our Mission</h3>
         <p>To empower people with data about their own timelines, fostering a deeper appreciation for the journey of life through precision science and educational storytelling.</p>

@@ -18,7 +18,7 @@ const Home: React.FC = () => {
               Calculate Your Exact <span className="text-indigo-600">Age by DOB.</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-lg">
-              AgeMeter is a free, professional-grade online tool to calculate your precise age from date of birth in years, months, days, minutes, and seconds.
+              Age Track is a free, professional-grade online tool to calculate your precise age from date of birth in years, months, days, minutes, and seconds.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#/calculator" className="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 shadow-xl shadow-indigo-200 transition-all transform hover:-translate-y-1">
@@ -55,9 +55,9 @@ const Home: React.FC = () => {
             <p>Determining your <strong>exact age</strong> manually can be challenging due to varying month lengths and the impact of leap years. Whether you are a student filling out an application, a parent tracking developmental milestones, or a professional requiring precise chronological data for legal documents, our <strong>DOB age calculator</strong> provides an instant and error-free solution.</p>
             
             <h3 className="text-2xl font-bold mt-12 mb-4">Precision You Can Trust</h3>
-            <p>At AgeMeter, we use high-fidelity algorithms to ensure your age calculation is 100% accurate. We account for the specific Gregorian calendar rules, ensuring that if you were born on a leap day or at a specific month-end transition, your result reflects reality.</p>
+            <p>At Age Track, we use high-fidelity algorithms to ensure your age calculation is 100% accurate. We account for the specific Gregorian calendar rules, ensuring that if you were born on a leap day or at a specific month-end transition, your result reflects reality.</p>
             
-            <h3 className="text-2xl font-bold mt-12 mb-4">Who Is AgeMeter For?</h3>
+            <h3 className="text-2xl font-bold mt-12 mb-4">Who Is Age Track For?</h3>
             <p>Our <strong>online age calculator</strong> is designed for a diverse set of users:</p>
             <ul>
               <li><strong>Students:</strong> Quickly find your age for university admissions and scholarship forms.</li>
@@ -68,13 +68,13 @@ const Home: React.FC = () => {
 
             <div className="bg-indigo-50 border-l-4 border-indigo-500 p-8 my-12 rounded-r-xl">
               <h4 className="text-xl font-bold text-indigo-900 mb-2 italic">"Accurate time tracking is the foundation of modern longevity science."</h4>
-              <p className="text-indigo-800 mb-0">— The AgeMeter Development Team</p>
+              <p className="text-indigo-800 mb-0">— The Age Track Development Team</p>
             </div>
 
             <h3 className="text-2xl font-bold mt-12 mb-4">How to Calculate Age from Date of Birth</h3>
             <p>Using our tool is simple. Just select your birth day, month, and year, and click "Generate Report." Our system immediately outputs your age in several metrics, including total days, minutes, and a real-time ticking second counter.</p>
             
-            <h3 className="text-2xl font-bold mt-12 mb-4">Key Benefits of AgeMeter</h3>
+            <h3 className="text-2xl font-bold mt-12 mb-4">Key Benefits of Age Track</h3>
             <ul className="space-y-4">
               <li><strong>Total Privacy:</strong> Calculations happen in your browser. We never store or transmit your birth date.</li>
               <li><strong>Real-time Tracking:</strong> Watch your age increment every second in real-time.</li>
