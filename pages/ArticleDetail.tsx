@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { BLOG_POSTS } from '../constants';
+import NativeAd from '../components/NativeAd';
 
 interface Props {
   id: string;
@@ -56,7 +57,7 @@ const ArticleDetail: React.FC<Props> = ({ id }) => {
                 Need to know exactly how many days have passed since a specific event? Use our world-class engine for instant results.
               </p>
               <a href="#/calculator" className="bg-indigo-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200">
-                Launch AgeMeter Tool
+                Launch Age Tracker Tool
               </a>
             </div>
           </div>
@@ -73,6 +74,11 @@ const ArticleDetail: React.FC<Props> = ({ id }) => {
                     </a>
                   ))}
                 </div>
+              </div>
+
+              {/* Sidebar Native Ad */}
+              <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+                <NativeAd />
               </div>
 
               <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-xl shadow-slate-200">

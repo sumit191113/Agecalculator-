@@ -1,6 +1,7 @@
 
 import React from 'react';
 import AgeCalculator from '../components/AgeCalculator';
+import NativeAd from '../components/NativeAd';
 import { BLOG_POSTS, FAQS } from '../constants';
 
 const Home: React.FC = () => {
@@ -45,6 +46,11 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Ad Section 1 */}
+      <div className="container mx-auto px-6">
+        <NativeAd />
+      </div>
 
       {/* Structured SEO Content Section */}
       <section className="py-24 bg-white" aria-labelledby="main-content-heading">
